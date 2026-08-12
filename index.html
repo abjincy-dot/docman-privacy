@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — DOCMAN</title>
+<style>
+  :root {
+    --ink: #1a1d24;
+    --sub: #565d6b;
+    --line: #e4e7ec;
+    --accent: #2f5fd6;
+    --highlight-bg: #fff6d8;
+    --highlight-border: #e8c860;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: #fbfbfc;
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .updated {
+    color: var(--sub);
+    font-size: 0.95rem;
+    margin: 0 0 32px;
+  }
+  .intro {
+    font-size: 1.05rem;
+    padding: 16px 18px;
+    background: #eef3ff;
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 12px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+  h2:first-of-type { border-top: none; }
+  p { margin: 0 0 14px; color: #2b2f38; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; color: #2b2f38; }
+  strong { color: var(--ink); }
+  code {
+    background: #eef0f3;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.92em;
+  }
+  a { color: var(--accent); }
+  .fillme {
+    background: var(--highlight-bg);
+    border: 1px solid var(--highlight-border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-weight: 600;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--sub);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Privacy Policy for DOCMAN</h1>
+  <p class="updated"><!-- update this date when you actually publish to Play Store --> Last updated: August 12, 2026</p>
+
+  <p class="intro"><strong>In short:</strong> DOCMAN stores everything on your device. We do not operate any server, and the app does not transmit your documents, notes, or personal information anywhere.</p>
+
+  <p>This Privacy Policy describes how the DOCMAN Android application ("DOCMAN," "the app," "we," "us") handles information. DOCMAN is developed and maintained by Abish Rajan, contactable at <a href="mailto:abjincy@gmail.com">abjincy@gmail.com</a>.</p>
+
+  <h2>1. Information DOCMAN Stores, and Where</h2>
+  <p>All of the following is stored <strong>only on your device</strong>, in the app's private storage area. None of it is uploaded to us, to any server we operate, or to any third party by DOCMAN itself.</p>
+  <ul>
+    <li><strong>Documents you import</strong> (PDFs, images, Word/Excel files, etc.) — stored in the app's private native storage on your device.</li>
+    <li><strong>Folder and department structure, names, and colors</strong> — stored locally.</li>
+    <li><strong>Notes you create</strong> — stored locally.</li>
+    <li><strong>Favorites, recents, and search history</strong> — stored locally.</li>
+    <li><strong>Items you delete</strong> — held in the app's local Recycle Bin until you permanently delete them or the retention period elapses, then removed from the device.</li>
+    <li><strong>App Lock PIN</strong> — stored on-device only as a one-way hash (see Section 3). We never see or store your actual PIN.</li>
+  </ul>
+  <p>Uninstalling the app, or using the in-app "Erase All Data" option, removes this data from your device. See Section 6 for backup files, which are the one copy of your data that leaves the app (into a location <strong>you</strong> choose).</p>
+
+  <h2>2. Google Drive Import</h2>
+  <p>DOCMAN lets you import a file from Google Drive. This works by handing off to the <strong>Google Drive app already installed on your device</strong> through Android's standard file-picker system — the same mechanism used for "Choose Files." DOCMAN does not sign in to your Google account, does not request or receive an OAuth access token, and does not communicate with Google's servers directly. The Google Drive app itself handles your authentication and file access under your existing Google account and Google's own privacy terms; DOCMAN only receives the file you explicitly chose, exactly as if you had picked it from local storage.</p>
+  <p>If the Google Drive app is not installed, this feature falls back to Android's general file picker, which does not involve Google Drive at all.</p>
+
+  <h2>3. Biometric / PIN App Lock</h2>
+  <p>If you enable fingerprint or face unlock, this is handled entirely by Android's built-in biometric system (<code>BiometricPrompt</code>). DOCMAN never receives, sees, or stores your fingerprint or facial data — that stays inside your device's secure hardware, managed by Android itself. DOCMAN only receives a yes/no result ("unlocked" or "not unlocked").</p>
+  <p>If you set a PIN instead, DOCMAN stores a one-way cryptographic hash of it on your device — never the PIN itself — and this hash is never transmitted anywhere.</p>
+
+  <h2>4. Network Access</h2>
+  <p>DOCMAN does not require or use internet access for its core functionality — importing, organizing, viewing, searching, and managing your documents all work entirely offline. The only network activity the app can trigger is opening an external link — for example, opening the Play Store listing when you tap "Check for Updates," or opening the Google Drive app as described in Section 2 — both of which hand off to another app rather than DOCMAN making a network request itself.</p>
+
+  <h2>5. Analytics, Advertising, and Third-Party SDKs</h2>
+  <p>DOCMAN does <strong>not</strong> include any analytics SDK, crash-reporting SDK, advertising SDK, or third-party tracking of any kind. We do not know how many people use the app, what they do inside it, or anything else about app usage, because we never collect that information.</p>
+  <p>The app is built with the following open-source components, which run entirely on your device and do not transmit data on their own: Capacitor (app framework), an Android PDF viewer library, and AndroidX libraries (including the biometric library). None of these are configured to send data off-device within DOCMAN.</p>
+
+  <h2>6. Backup and Sharing</h2>
+  <p>DOCMAN's "Backup &amp; Export" feature creates a single backup file containing your documents, notes, and folder structure, and lets you save or share it using Android's standard share sheet — to Google Drive, email, another app, or local device storage, entirely at your choice. DOCMAN does not automatically upload this backup anywhere; where it ends up is determined by what you choose in the share sheet.</p>
+  <p>When you use "Share" on an individual document, DOCMAN provides that one file to the app you choose via Android's standard, restricted file-sharing mechanism (FileProvider), scoped only to the file you're sharing.</p>
+
+  <h2>7. Data Deletion</h2>
+  <p>You can delete your data at any time:</p>
+  <ul>
+    <li>Delete individual files, folders, or notes through the app's normal interface (moved to Recycle Bin, then permanently removable).</li>
+    <li>Use <strong>Settings → Erase All Data</strong> to remove all documents, notes, and the Recycle Bin from the app (this keeps your folder/department structure, now empty — see the in-app confirmation for exactly what's removed).</li>
+    <li>Uninstalling the app removes all app data from your device, per standard Android behavior.</li>
+  </ul>
+  <p>Because nothing is stored on a server we control, there is no separate "delete my account" process — deleting the data on your device is complete and final.</p>
+
+  <h2>8. Children's Privacy</h2>
+  <p>DOCMAN is a general-purpose document management tool and is not directed at children. It does not knowingly collect information from children, and per Section 1, it does not collect information from anyone in the first place beyond what's stored locally on the device it's installed on.</p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>If this policy changes — for example, if a future version of DOCMAN adds a feature that changes how data is handled — we will update this page and revise the "Last updated" date above.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions about this policy or DOCMAN's data practices can be sent to <a href="mailto:abjincy@gmail.com">abjincy@gmail.com</a>.</p>
+
+  <footer>DOCMAN Privacy Policy</footer>
+
+</div>
+</body>
+</html>
