@@ -82,7 +82,7 @@
 <div class="wrap">
 
   <h1>Privacy Policy for DOCMAN</h1>
-  <p class="updated"><!-- update this date when you actually publish to Play Store --> Last updated: August 12, 2026</p>
+  <p class="updated"><!-- update this date when you actually publish to Play Store --> Last updated: August 24, 2026</p>
 
   <p class="intro"><strong>In short:</strong> DOCMAN stores everything on your device. We do not operate any server, and the app does not transmit your documents, notes, or personal information anywhere.</p>
 
@@ -104,37 +104,47 @@
   <p>DOCMAN lets you import a file from Google Drive. This works by handing off to the <strong>Google Drive app already installed on your device</strong> through Android's standard file-picker system — the same mechanism used for "Choose Files." DOCMAN does not sign in to your Google account, does not request or receive an OAuth access token, and does not communicate with Google's servers directly. The Google Drive app itself handles your authentication and file access under your existing Google account and Google's own privacy terms; DOCMAN only receives the file you explicitly chose, exactly as if you had picked it from local storage.</p>
   <p>If the Google Drive app is not installed, this feature falls back to Android's general file picker, which does not involve Google Drive at all.</p>
 
-  <h2>3. Biometric / PIN App Lock</h2>
-  <p>If you enable fingerprint or face unlock, this is handled entirely by Android's built-in biometric system (<code>BiometricPrompt</code>). DOCMAN never receives, sees, or stores your fingerprint or facial data — that stays inside your device's secure hardware, managed by Android itself. DOCMAN only receives a yes/no result ("unlocked" or "not unlocked").</p>
-  <p>If you set a PIN instead, DOCMAN stores a one-way cryptographic hash of it on your device — never the PIN itself — and this hash is never transmitted anywhere.</p>
+  <h2>3. Camera</h2>
+  <p>DOCMAN's "Take Photo" option launches your device's built-in camera app via Android's standard camera intent. DOCMAN does not access the camera hardware directly — the camera app itself captures the photo and hands the resulting image back to DOCMAN, the same way picking an existing photo from your gallery works.</p>
 
-  <h2>4. Network Access</h2>
+  <h2>4. On-Device Text Recognition (OCR)</h2>
+  <p>For scanned or image-only PDF pages — where the page is really just a picture, with no underlying selectable text — DOCMAN uses Google ML Kit's on-device text recognition to make that page's text selectable, highlightable, and searchable. This processing happens entirely on your device: no page image and no recognized text is ever sent to Google or to any server. ML Kit currently supports Latin-script text only. See Section 8 for how ML Kit is licensed.</p>
+
+  <h2>5. Biometric / PIN App Lock</h2>
+  <p>If you enable fingerprint or face unlock, this is handled entirely by Android's built-in biometric system (<code>BiometricPrompt</code>). DOCMAN never receives, sees, or stores your fingerprint or facial data — that stays inside your device's secure hardware, managed by Android itself. DOCMAN only receives a yes/no result ("unlocked" or "not unlocked").</p>
+  <p>If you set a PIN instead, DOCMAN stores a salted, one-way cryptographic hash of it on your device — never the PIN itself — and this hash is never transmitted anywhere. Repeated incorrect PIN attempts are slowed with an increasing delay to resist guessing; there is no way to recover a forgotten PIN other than the app's own reset flow, since DOCMAN itself never has access to it.</p>
+
+  <h2>6. Notifications</h2>
+  <p>DOCMAN can show local reminders — for example, when a document you've tagged with an expiry date is approaching or overdue. These notifications are generated and scheduled entirely on your device by Android itself. DOCMAN does not use any push-notification or cloud-messaging service, and no data leaves your device to generate or deliver them.</p>
+
+  <h2>7. Network Access</h2>
   <p>DOCMAN does not require or use internet access for its core functionality — importing, organizing, viewing, searching, and managing your documents all work entirely offline. The only network activity the app can trigger is opening an external link — for example, opening the Play Store listing when you tap "Check for Updates," or opening the Google Drive app as described in Section 2 — both of which hand off to another app rather than DOCMAN making a network request itself.</p>
 
-  <h2>5. Analytics, Advertising, and Third-Party SDKs</h2>
+  <h2>8. Analytics, Advertising, and Third-Party SDKs</h2>
   <p>DOCMAN does <strong>not</strong> include any analytics SDK, crash-reporting SDK, advertising SDK, or third-party tracking of any kind. We do not know how many people use the app, what they do inside it, or anything else about app usage, because we never collect that information.</p>
-  <p>The app is built with the following open-source components, which run entirely on your device and do not transmit data on their own: Capacitor (app framework), an Android PDF viewer library, and AndroidX libraries (including the biometric library). None of these are configured to send data off-device within DOCMAN.</p>
+  <p>The app is built with the following open-source components, which run entirely on your device and do not transmit data on their own: Capacitor (app framework), an Android PDF viewer library, a PDF processing library (for text extraction, highlighting, and form/annotation features), and AndroidX libraries (including the biometric library).</p>
+  <p>DOCMAN also includes <strong>Google ML Kit</strong> (on-device text recognition, see Section 4) — a Google SDK, not open source, distributed under Google's own APIs Terms of Service. Unlike the components above, it isn't open-source, but the same rule applies: it requires no network access, no Google account sign-in, and transmits nothing off your device.</p>
 
-  <h2>6. Backup and Sharing</h2>
-  <p>DOCMAN's "Backup &amp; Export" feature creates a single backup file containing your documents, notes, and folder structure, and lets you save or share it using Android's standard share sheet — to Google Drive, email, another app, or local device storage, entirely at your choice. DOCMAN does not automatically upload this backup anywhere; where it ends up is determined by what you choose in the share sheet.</p>
+  <h2>9. Backup and Sharing</h2>
+  <p>DOCMAN's "Backup &amp; Export" feature creates a single backup file containing your documents, notes, and folder structure, and lets you save or share it using Android's standard share sheet — to Google Drive, email, another app, or local device storage, entirely at your choice. DOCMAN does not automatically upload this backup anywhere; where it ends up is determined by what you choose in the share sheet. <strong>This backup file is not encrypted</strong> — anyone who obtains it can open the documents inside, so store and share it with the same care you'd give the original documents.</p>
   <p>When you use "Share" on an individual document, DOCMAN provides that one file to the app you choose via Android's standard, restricted file-sharing mechanism (FileProvider), scoped only to the file you're sharing.</p>
 
-  <h2>7. Data Deletion</h2>
+  <h2>10. Data Deletion</h2>
   <p>You can delete your data at any time:</p>
   <ul>
     <li>Delete individual files, folders, or notes through the app's normal interface (moved to Recycle Bin, then permanently removable).</li>
     <li>Use <strong>Settings → Erase All Data</strong> to remove all documents, notes, and the Recycle Bin from the app (this keeps your folder/department structure, now empty — see the in-app confirmation for exactly what's removed).</li>
     <li>Uninstalling the app removes all app data from your device, per standard Android behavior.</li>
   </ul>
-  <p>Because nothing is stored on a server we control, there is no separate "delete my account" process — deleting the data on your device is complete and final.</p>
+  <p>"Permanently delete" in DOCMAN removes a file from the app's storage and from the device; it is not a forensic secure-erase and does not guarantee the underlying flash storage blocks are unrecoverable. Because nothing is stored on a server we control, there is no separate "delete my account" process — deleting the data on your device is complete and final from DOCMAN's side.</p>
 
-  <h2>8. Children's Privacy</h2>
+  <h2>11. Children's Privacy</h2>
   <p>DOCMAN is a general-purpose document management tool and is not directed at children. It does not knowingly collect information from children, and per Section 1, it does not collect information from anyone in the first place beyond what's stored locally on the device it's installed on.</p>
 
-  <h2>9. Changes to This Policy</h2>
+  <h2>12. Changes to This Policy</h2>
   <p>If this policy changes — for example, if a future version of DOCMAN adds a feature that changes how data is handled — we will update this page and revise the "Last updated" date above.</p>
 
-  <h2>10. Contact</h2>
+  <h2>13. Contact</h2>
   <p>Questions about this policy or DOCMAN's data practices can be sent to <a href="mailto:abjincy@gmail.com">abjincy@gmail.com</a>.</p>
 
   <footer>DOCMAN Privacy Policy</footer>
