@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — DOCMAN</title>
@@ -82,7 +80,7 @@
 <div class="wrap">
 
   <h1>Privacy Policy for DOCMAN</h1>
-  <p class="updated"><!-- update this date when you actually publish to Play Store --> Last updated: August 25, 2026</p>
+  <p class="updated"><!-- update this date when you actually publish to Play Store --> Last updated: September 4, 2026</p>
 
   <p class="intro"><strong>In short:</strong> DOCMAN stores everything on your device. We do not operate any server, and the app does not transmit your documents, notes, or personal information anywhere.</p>
 
@@ -92,8 +90,9 @@
   <p>All of the following is stored <strong>only on your device</strong>, in the app's private storage area. None of it is uploaded to us, to any server we operate, or to any third party by DOCMAN itself.</p>
   <ul>
     <li><strong>Documents you import</strong> (PDFs, images, Word/Excel files, etc.) — stored in the app's private native storage on your device.</li>
-    <li><strong>Folder and department structure, names, and colors</strong> — stored locally.</li>
+    <li><strong>Folder and department structure, names, colors, and icons</strong> — stored locally.</li>
     <li><strong>Notes you create</strong> — stored locally.</li>
+    <li><strong>Reminders you create</strong> (title, due date, and time) — stored locally.</li>
     <li><strong>Favorites, recents, and search history</strong> — stored locally.</li>
     <li><strong>Items you delete</strong> — held in the app's local Recycle Bin until you permanently delete them or the retention period elapses, then removed from the device.</li>
     <li><strong>App Lock PIN</strong> — stored on-device only as a one-way hash (see Section 3). We never see or store your actual PIN.</li>
@@ -114,8 +113,9 @@
   <p>If you enable fingerprint or face unlock, this is handled entirely by Android's built-in biometric system (<code>BiometricPrompt</code>). DOCMAN never receives, sees, or stores your fingerprint or facial data — that stays inside your device's secure hardware, managed by Android itself. DOCMAN only receives a yes/no result ("unlocked" or "not unlocked").</p>
   <p>If you set a PIN instead, DOCMAN stores a salted, one-way cryptographic hash of it on your device — never the PIN itself — and this hash is never transmitted anywhere. Repeated incorrect PIN attempts are slowed with an increasing delay to resist guessing; there is no way to recover a forgotten PIN other than the app's own reset flow, since DOCMAN itself never has access to it.</p>
 
-  <h2>6. Notifications</h2>
-  <p>DOCMAN can show local reminders — for example, when a document you've tagged with an expiry date is approaching or overdue. These notifications are generated and scheduled entirely on your device by Android itself. DOCMAN does not use any push-notification or cloud-messaging service, and no data leaves your device to generate or deliver them.</p>
+  <h2>6. Notifications and Reminders</h2>
+  <p>DOCMAN can show local notifications for two things you set up yourself: <strong>expiry alerts</strong>, when a document you've tagged with an expiry date is approaching or overdue, and <strong>Reminders</strong>, a title, due date, and time you set yourself under the Reminders tab. These notifications are generated and scheduled entirely on your device by Android itself. DOCMAN does not use any push-notification or cloud-messaging service, and no data leaves your device to generate or deliver them.</p>
+  <p>To show these, DOCMAN requests Android's notification permission the first time it needs it, and — separately, once — may ask to be excluded from battery optimization, so Android doesn't delay or drop a scheduled reminder while the app isn't open. Declining either of these just means notifications may not fire reliably or at all; DOCMAN's other features are unaffected either way, and nothing about this exchanges any data with us or anyone else — it only changes what Android itself allows the app to do on your device.</p>
 
   <h2>7. Network Access</h2>
   <p>DOCMAN does not require or use internet access for its core functionality — importing, organizing, viewing, searching, and managing your documents all work entirely offline. The only network activity DOCMAN's own code can trigger is opening an external link — for example, opening the Play Store listing when you tap "Check for Updates," or opening the Google Drive app as described in Section 2 — both of which hand off to another app rather than DOCMAN making a network request itself.</p>
@@ -152,5 +152,6 @@
   <footer>DOCMAN Privacy Policy</footer>
 
 </div>
-</body>
-</html>
+
+
+</body></html>
