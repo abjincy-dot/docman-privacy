@@ -199,7 +199,7 @@
 
   <header class="head" id="top">
     <h1>Privacy Policy</h1>
-    <p class="stamp">Last updated &middot; September 10, 2026</p>
+    <p class="stamp">Last updated &middot; September 13, 2026</p>
   </header>
 
   <main class="card">
@@ -293,17 +293,21 @@
     <h2 id="s7"><span class="n">07</span>Network Access</h2>
     <p>DOCMAN does not require or use internet access for its core functionality &mdash;
       importing, organizing, viewing, searching, and managing your documents all work entirely
-      offline. The only network activity DOCMAN's own code can trigger is opening an external
-      link &mdash; for example, opening the Play Store listing when you tap &ldquo;Check for
-      Updates,&rdquo; or opening the Google Drive app as described in Section 2 &mdash; both of
-      which hand off to another app rather than DOCMAN making a network request itself.</p>
-    <p>The app does declare Android's internet permission, and alongside it the network-state
+      offline. The internet is involved in only two situations, and neither sends your
+      documents anywhere: when you <strong>buy or restore DOCMAN Pro</strong>, which Google Play
+      handles (see Section 8), and when you open an external link &mdash; for example the Play
+      Store listing from &ldquo;Check for Updates,&rdquo; or the Google Drive app as described in
+      Section 2 &mdash; which hands off to another app rather than DOCMAN making a network
+      request itself.</p>
+    <p>The app declares Android's internet permission, and alongside it the network-state
       permission (<code>ACCESS_NETWORK_STATE</code>), which lets an app check whether a
-      connection exists. Neither is used by any DOCMAN feature; both are present because the
-      Google ML Kit library described in Section 4 includes Google's own standard SDK-level
-      diagnostics infrastructure, which requires them to exist regardless of whether they are
-      ever used. Both will therefore appear in the app's permission list on Google Play. See
-      Section 8 for detail.</p>
+      connection exists. No DOCMAN feature uses them to send your documents, notes, or personal
+      information anywhere. They are present because the Google ML Kit library described in
+      Section 4 includes Google's own standard SDK-level diagnostics infrastructure, which
+      requires them to exist regardless of whether they are ever used. Both will therefore
+      appear in the app's permission list on Google Play. Purchases of DOCMAN Pro are carried
+      out by the Google Play Store app on your device rather than by DOCMAN itself &mdash; see
+      Section 8.</p>
 
     <h2 id="s8"><span class="n">08</span>Analytics, Advertising, and Third-Party SDKs</h2>
     <p>DOCMAN does <strong>not</strong> include any analytics SDK, crash-reporting SDK,
@@ -322,6 +326,13 @@
       Android SDKs, which is why DOCMAN's app package declares Android's internet permission
       (see Section 7) &mdash; DOCMAN has no analytics or crash-reporting account configured to
       receive anything through it, and no document content is ever included in it regardless.</p>
+    <p>DOCMAN uses the <strong>Google Play Billing Library</strong> to offer the optional
+      one-time DOCMAN Pro upgrade. When you buy or restore DOCMAN Pro, the purchase is processed
+      by the Google Play Store app on your device and by Google, under Google&rsquo;s own terms
+      and privacy policy. DOCMAN never receives your payment details. The only thing it learns
+      is whether your Google account owns DOCMAN Pro, and it keeps that yes/no answer on your
+      device so the upgrade keeps working when you are offline. No document, note, or file
+      content is ever part of a purchase.</p>
 
     <h2 id="s9"><span class="n">09</span>Backup and Sharing</h2>
     <p>DOCMAN's &ldquo;Backup &amp; Export&rdquo; feature creates a single backup file
