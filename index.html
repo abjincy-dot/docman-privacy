@@ -207,7 +207,8 @@
     <div class="short">
       <p><b>In short:</b> DOCMAN stores everything on your device. We do not operate any
         server, and the app does not transmit your documents, notes, or personal
-        information anywhere.</p>
+        information anywhere. Its text-recognition library sends Google only limited
+        technical diagnostics (see Section 8).</p>
     </div>
 
     <p class="lede">This Privacy Policy describes how the DOCMAN Android application
@@ -283,8 +284,8 @@
       entirely on your device by Android itself. DOCMAN does not use any push-notification or
       cloud-messaging service, and no data leaves your device to generate or deliver them.</p>
     <p>To show these, DOCMAN requests Android's notification permission the first time it needs
-      it, and &mdash; separately, once &mdash; may ask to be excluded from battery optimization,
-      so Android doesn't delay or drop a scheduled reminder while the app isn't open. Declining
+      it, and &mdash; separately &mdash; may ask you to allow &ldquo;Alarms &amp; reminders,&rdquo;
+      so Android delivers a scheduled reminder at its set time while the app isn't open. Declining
       either of these just means notifications may not fire reliably or at all; DOCMAN's other
       features are unaffected either way, and nothing about this exchanges any data with us or
       anyone else &mdash; it only changes what Android itself allows the app to do on your
@@ -303,8 +304,8 @@
       permission (<code>ACCESS_NETWORK_STATE</code>), which lets an app check whether a
       connection exists. No DOCMAN feature uses them to send your documents, notes, or personal
       information anywhere. They are present because the Google ML Kit library described in
-      Section 4 includes Google's own standard SDK-level diagnostics infrastructure, which
-      requires them to exist regardless of whether they are ever used. Both will therefore
+      Section 4 uses them to send Google limited technical diagnostics about the library itself
+      (see Section 8). Both will therefore
       appear in the app's permission list on Google Play. Purchases of DOCMAN Pro are carried
       out by the Google Play Store app on your device rather than by DOCMAN itself &mdash; see
       Section 8.</p>
@@ -321,11 +322,16 @@
     <p>DOCMAN also includes <strong>Google ML Kit</strong> (on-device text recognition, see
       Section 4) &mdash; a Google SDK, not open source, distributed under Google's own APIs
       Terms of Service. The actual text recognition happens entirely on your device, requires no
-      Google account sign-in, and transmits no document content anywhere. However, this library
-      includes Google's own standard SDK-level diagnostics infrastructure, common to Google's
-      Android SDKs, which is why DOCMAN's app package declares Android's internet permission
-      (see Section 7) &mdash; DOCMAN has no analytics or crash-reporting account configured to
-      receive anything through it, and no document content is ever included in it regardless.</p>
+      Google account sign-in, and transmits no document content anywhere. However, like Google's
+      other Android SDKs, ML Kit sends Google limited technical diagnostics about how the library
+      is working: device details (manufacturer, model, and Android version), app details
+      (package name and version), a per-installation identifier, performance measurements,
+      feature settings, and error codes. Google encrypts this in transit and does not transfer it
+      to third parties, as described in
+      <a class="link" href="https://developers.google.com/ml-kit/android-data-disclosure">Google's
+      ML Kit data disclosure</a>. It never includes your documents, page images, or recognized
+      text, and it goes to Google, not to us &mdash; DOCMAN has no account that receives it. This
+      is why DOCMAN's app package declares Android's internet permission (see Section 7).</p>
     <p>DOCMAN uses the <strong>Google Play Billing Library</strong> to offer the optional
       one-time DOCMAN Pro upgrade. When you buy or restore DOCMAN Pro, the purchase is processed
       by the Google Play Store app on your device and by Google, under Google&rsquo;s own terms
