@@ -198,7 +198,7 @@
 
   <header class="head" id="top">
     <h1>Privacy Policy</h1>
-    <p class="stamp">Last updated &middot; October 12, 2026</p>
+    <p class="stamp">Last updated &middot; October 15, 2026</p>
   </header>
 
   <main class="card">
@@ -238,7 +238,8 @@
         signature so you can place it again later. It is stored as an image in the app&rsquo;s private
         storage on your device, is never shared or uploaded, and is removed when you delete it in the
         app (Sign &rarr; Delete saved signature), when you turn off &ldquo;Save this signature for next
-        time&rdquo;, or when DOCMAN is uninstalled.</li>
+        time&rdquo;, or when DOCMAN is uninstalled. The ink colour and pen thickness you last chose are
+        remembered with it, in the same private storage and nowhere else.</li>
       <li><strong>Safety Snapshots</strong> &mdash; immediately before a backup is restored, DOCMAN
         copies your current data into its own private storage so a mistaken restore can be undone. The
         most recent few are kept, they are never shared or uploaded, and they are removed when DOCMAN
@@ -337,19 +338,28 @@
       features are unaffected either way, and nothing about this exchanges any data with us or
       anyone else &mdash; it only changes what Android itself allows the app to do on your
       device.</p>
-    <p><strong>What appears on your lock screen.</strong> These alerts show their text on the
-      lock screen, which means a document name or a reminder title &mdash; &ldquo;Passport
-      expires today,&rdquo; for instance &mdash; can be read by anyone holding your phone without
-      unlocking it. That is deliberate, because an alert you cannot read is an alert that gets
-      ignored, but it is your choice: Android can hide notification content on the lock screen,
-      either for every app under your phone's lock-screen settings or for DOCMAN alone under its
-      notification settings. Nothing is sent anywhere either way &mdash; this only affects what
-      is drawn on your own screen.</p>
+    <p><strong>What appears on your lock screen.</strong> These alerts are worded so that they do
+      not give away what you keep. They never contain a document name or a reminder title &mdash;
+      an expiry alert says, for instance, &ldquo;A document expires today. Open DOCMAN to see
+      which,&rdquo; and a reminder says &ldquo;You have a reminder due.&rdquo; You see which
+      document or reminder it is only after you open DOCMAN. Because that wording is already
+      general, DOCMAN lets Android show it on the lock screen; if you prefer, Android can hide
+      notification content there altogether, for every app under your phone's lock-screen
+      settings or for DOCMAN alone under its notification settings. Nothing is sent anywhere
+      either way &mdash; this only affects what is drawn on your own screen.</p>
     <p>A reminder that has fallen due repeats every 30 minutes for up to three hours until you
-      acknowledge it. An expiry alert arrives twice on the day a document runs out &mdash; once in the
-      morning and once in the late afternoon &mdash; so a document you have not dealt with is raised
-      again without the day filling up with alerts. Those repeats are scheduled on your device in
-      advance, like the first alert, and stop as soon as you dismiss them.</p>
+      acknowledge it. An expiry alert arrives 7 days, 3 days and 1 day before a document runs out,
+      then every 30 minutes between 7 am and 9 pm on the day itself until you acknowledge it, and
+      once a day for up to a week afterwards if it still has not been dealt with. When several
+      documents run out on the same day, DOCMAN raises one alert that says how many &mdash;
+      &ldquo;3 documents expire today&rdquo; &mdash; instead of one for each. Those alerts are
+      scheduled on your device in advance, like the first one, and stop as soon as you dismiss
+      them.</p>
+    <p>When you open DOCMAN, it may also show a banner listing the reminders that are due and the
+      documents expiring within three days, so you can act on them straight away. The small
+      picture on each card is chosen on your device from the document&rsquo;s name, the name of
+      the folder it is in, and its file type; DOCMAN does not read the contents of a file to pick
+      it, and nothing about it is sent anywhere.</p>
     <p>A reminder you set to repeat every month or every year works out its own next date on your
       device as soon as you acknowledge it, and schedules the next alert the same local way. Nothing
       about a repeating reminder is sent anywhere, and nothing about it is kept outside the app&rsquo;s
