@@ -198,7 +198,7 @@
 
   <header class="head" id="top">
     <h1>Privacy Policy</h1>
-    <p class="stamp">Last updated &middot; October 17, 2026</p>
+    <p class="stamp">Last updated &middot; October 21, 2026</p>
   </header>
 
   <main class="card">
@@ -250,6 +250,10 @@
       <li><strong>Reminders you create</strong> (title, due date and time, whether you set it to
         repeat every month or every year, and &mdash; if you attached it to a note &mdash; which note
         it belongs to) &mdash; stored locally.</li>
+      <li><strong>Calendar events you choose to import</strong> &mdash; only if you press
+        &ldquo;Sync Calendar&rdquo; and allow Android's calendar permission. DOCMAN reads the
+        upcoming events (title, date, time, place) from your phone's calendar and lists them as
+        reminders, stored locally. See Section 6.</li>
       <li><strong>Favorites, recents, and search history</strong> &mdash; stored locally.</li>
       <li><strong>Items you delete</strong> &mdash; held in the app's local Recycle Bin until you
         permanently delete them or the retention period elapses, then removed from the device.</li>
@@ -338,6 +342,16 @@
       features are unaffected either way, and nothing about this exchanges any data with us or
       anyone else &mdash; it only changes what Android itself allows the app to do on your
       device.</p>
+    <p><strong>Sync Calendar.</strong> The Reminders screen has an optional &ldquo;Sync Calendar&rdquo;
+      button. Only when you press it, DOCMAN asks Android for permission to <em>read</em> your
+      calendar and then copies your upcoming events (up to a year ahead) from the calendar app
+      on your phone into your DOCMAN reminders, stored on your device like any other reminder.
+      An optional &ldquo;Auto&rdquo; switch beside the button repeats the same read, on your device,
+      whenever you open the app. DOCMAN never writes to, changes or deletes anything in your calendar, and the events are
+      not sent to us or to anyone else. If you decline the permission, nothing is read and every
+      other feature works as before. You can withdraw the permission at any time in Android's
+      Settings &gt; Apps &gt; DOCMAN &gt; Permissions; reminders already imported stay in DOCMAN until
+      you delete them.</p>
     <p><strong>What appears on your lock screen.</strong> These alerts are worded so that they do
       not give away what you keep. They never contain a document name or a reminder title &mdash;
       an expiry alert says, for instance, &ldquo;A document expires today. Open DOCMAN to see
@@ -424,8 +438,12 @@
       you; the backup is then encrypted with AES-256 using that password or key. The file is
       also saved directly to your device's Documents folder, and you can additionally share it
       using Android's standard share sheet &mdash; to Google Drive, email, another app, or
-      elsewhere, entirely at your choice. DOCMAN does not automatically upload this backup
-      anywhere.</p>
+      elsewhere, entirely at your choice. After a backup, the &ldquo;Save a copy&rdquo; button
+      hands the backup file to the Google Drive app&rsquo;s own &ldquo;Save to Drive&rdquo; screen
+      (or, if Drive is not installed, to Android&rsquo;s file picker) so that you can keep a copy
+      off your phone; from that point Google Drive handles the file under Google&rsquo;s own
+      terms and privacy policy. DOCMAN does not automatically upload this backup anywhere, and
+      nothing is sent unless you choose where it goes.</p>
     <p>Your password or recovery key is never stored or transmitted by DOCMAN &mdash; it exists
       only in your own memory or wherever you chose to save it. Anyone who obtains the backup
       file cannot open the documents inside it without that password or recovery key, and
