@@ -198,7 +198,7 @@
 
   <header class="head" id="top">
     <h1>Privacy Policy</h1>
-    <p class="stamp">Last updated &middot; October 21, 2026</p>
+    <p class="stamp">Last updated &middot; November 14, 2026</p>
   </header>
 
   <main class="card">
@@ -337,8 +337,10 @@
       cloud-messaging service, and no data leaves your device to generate or deliver them.</p>
     <p>To show these, DOCMAN requests Android's notification permission the first time it needs
       it, and &mdash; separately &mdash; may ask you to allow &ldquo;Alarms &amp; reminders,&rdquo;
-      so Android delivers a scheduled reminder at its set time while the app isn't open. Declining
-      either of these just means notifications may not fire reliably or at all; DOCMAN's other
+      so Android delivers a scheduled reminder at its set time while the app isn't open, and to allow
+      &ldquo;Full screen notifications,&rdquo; so a due alert can open a card over your lock screen with
+      <em>View</em> and <em>Snooze</em> buttons, the way an alarm clock does. Declining
+      any of these just means notifications may not fire reliably or at all; DOCMAN's other
       features are unaffected either way, and nothing about this exchanges any data with us or
       anyone else &mdash; it only changes what Android itself allows the app to do on your
       device.</p>
@@ -351,7 +353,8 @@
       not sent to us or to anyone else. If you decline the permission, nothing is read and every
       other feature works as before. You can withdraw the permission at any time in Android's
       Settings &gt; Apps &gt; DOCMAN &gt; Permissions; reminders already imported stay in DOCMAN until
-      you delete them.</p>
+      you delete them. An imported event that has a time alerts you at that time; an all-day event
+      alerts you in the morning. Those alerts are scheduled on your device like any other reminder.</p>
     <p><strong>What appears on your lock screen.</strong> These alerts are worded so that they do
       not give away what you keep. They never contain a document name or a reminder title &mdash;
       an expiry alert says, for instance, &ldquo;A document expires today. Open DOCMAN to see
@@ -361,10 +364,14 @@
       notification content there altogether, for every app under your phone's lock-screen
       settings or for DOCMAN alone under its notification settings. Nothing is sent anywhere
       either way &mdash; this only affects what is drawn on your own screen.</p>
-    <p>A reminder that has fallen due repeats every 30 minutes for up to three hours until you
-      acknowledge it. An expiry alert arrives 7 days, 3 days and 1 day before a document runs out,
-      then every 30 minutes between 7 am and 9 pm on the day itself until you acknowledge it, and
-      once a day for up to a week afterwards if it still has not been dealt with. When several
+    <p>The card over the lock screen follows the same rule: it shows only that a reminder is due or
+      that a document expires, with the time, and asks you to unlock your phone to see which.
+      A reminder that has fallen due repeats every 30 minutes for up to three hours until you
+      open it. An expiry alert arrives 7 days, 3 days and 1 day before a document runs out,
+      then every 30 minutes on the day itself, from the time you chose until 9 pm, until you open it,
+      and once a day for up to five days afterwards if it still has not been dealt with. A document
+      you set to repeat every month or every year moves on to its next date by itself, and its alerts
+      move with it. When several
       documents run out on the same day, DOCMAN raises one alert that says how many &mdash;
       &ldquo;3 documents expire today&rdquo; &mdash; instead of one for each. Those alerts are
       scheduled on your device in advance, like the first one, and stop as soon as you dismiss
